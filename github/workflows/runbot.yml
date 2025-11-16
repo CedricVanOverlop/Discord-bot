@@ -1,0 +1,30 @@
+name: Run Discord Bot
+
+on:
+  schedule:
+    - cron: "55 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  runbot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run bot for 15 minutes
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+        run: |
+          python bot.py &
+          BOT_PID=$!
+          sleep 900
+          kill $BOT_PID

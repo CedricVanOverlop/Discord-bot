@@ -171,13 +171,13 @@ class EventManager:
         self.save()
 
     # -----------------------------
-    #   TASK AUTOMATIQUE 07:00
+    #   TASK AUTOMATIQUE 08:00
     # -----------------------------
     def setup_scheduler(self, bot):
         @tasks.loop(minutes=1)
         async def scheduler():
             now = datetime.now(TIMEZONE)
-            if now.hour == 7 and now.minute == 0:
+            if now.hour == 8 and now.minute == 0:
                 await self.send_checklist()
                 await self.report_unfinished()
 
