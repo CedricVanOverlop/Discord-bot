@@ -16,9 +16,9 @@ class TFTSheets :
         fichier = pd.read_csv(self.compos_urls[comp], header=None)
 
         info = {'nom': comp,
-                'avg' : fichier.iloc[1,12],
-                'winrate': fichier.iloc[1,13],
-                'top4rate' : fichier.iloc[1,14]
+                'avg' : fichier.iloc[2,12],
+                'winrate': fichier.iloc[2,13],
+                'top4rate' : fichier.iloc[2,14]
             }
         return info
     
