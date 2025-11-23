@@ -1,6 +1,6 @@
 import discord
 from discord.ui import View, Button
-from modals import CompoModal, BuildModal, ArtefactModal, RadiantModal, ConditionsModal
+from .modals import CompoModal, BuildModal, ArtefactModal, RadiantModal, ConditionsModal
 
 
 class MenuView(View):
