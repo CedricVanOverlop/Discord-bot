@@ -81,7 +81,7 @@ class CompoModal(Modal):
         )
         embed.add_field(name="Avg Place", value=info['avg'], inline=True)
         embed.add_field(name="Win Rate", value=info['winrate'], inline=True)
-        embed.add_field(name="Top 4 Rate", value=info['top4rate'], inline=True)
+        embed.add_field(name="Top4 Rate", value=info['top4rate'], inline=True)
         embed.set_footer(text=f"Demandé par {interaction.user.display_name}")
         
         # Répond à l'interaction (obligatoire dans les 3 secondes)

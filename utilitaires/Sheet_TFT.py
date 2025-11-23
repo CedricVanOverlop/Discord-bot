@@ -81,7 +81,7 @@ class TFTSheets :
                 condi = {'condition' : fichier.iloc[3 + i,11],
                         'avg' : fichier.iloc[3 + i,12],
                         'winrate' : fichier.iloc[3 + i,13],
-                        'top4Rate' : fichier.iloc[3 + i,14],
+                        'top4rate' : fichier.iloc[3 + i,14],
                         'remarques' : fichier.iloc[3 + i,15],
                 }
                 conditions.append(condi)
