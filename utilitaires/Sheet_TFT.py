@@ -80,9 +80,9 @@ class TFTSheets :
             if pd.notna(fichier.iloc[3 + i,11]) : 
                 condi = {'condition' : fichier.iloc[3 + i,11],
                         'avg' : fichier.iloc[3 + i,12],
-                        'Winrate' : fichier.iloc[3 + i,13],
-                        'Top4Rate' : fichier.iloc[3 + i,14],
-                        'Remarques' : fichier.iloc[3 + i,15],
+                        'winrate' : fichier.iloc[3 + i,13],
+                        'top4Rate' : fichier.iloc[3 + i,14],
+                        'remarques' : fichier.iloc[3 + i,15],
                 }
                 conditions.append(condi)
         return conditions if conditions else None   
